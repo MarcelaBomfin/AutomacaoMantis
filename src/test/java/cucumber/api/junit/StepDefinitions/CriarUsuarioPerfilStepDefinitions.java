@@ -1,6 +1,5 @@
 package cucumber.api.junit.StepDefinitions;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -39,7 +38,6 @@ public class CriarUsuarioPerfilStepDefinitions {
 		loginPage.clicarEntrarUsuario();
 		loginPage.preencherSenha(usuario.getSenha());
 		loginPage.clicarEntrarUsuario();
-
 	}
 
 	@Given("^acessar Gerenciar$")
@@ -71,7 +69,6 @@ public class CriarUsuarioPerfilStepDefinitions {
 	@Then("^o sistema ira criar os usuarios$")
 	public void oSistemaIraCriarOsUsuarios() {
 		criarUsuarioPerfilPage.finalizarCriarUsuario();
-		criarUsuarioPerfilPage.validarCriacaoUsuario();
 	}
 
 }

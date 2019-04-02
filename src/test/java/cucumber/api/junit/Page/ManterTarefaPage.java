@@ -37,8 +37,8 @@ public class ManterTarefaPage extends PaginaInicialPage {
 	By buttonFecharTarefa = (By.xpath("//input[@value='Fechar']"));
 	By preencherAnotacao = By.id("bugnote_text");
 	By fecharTarefaButton = (By.xpath("//input[@value='Fechar Tarefa']"));
-	
-	//adicionar marcador tarefa
+
+	// adicionar marcador tarefa
 	By aplicarMarcador = (By.xpath("//input[@value='Aplicar']"));
 	By historicoTarefa = (By.xpath("//*[contains(., 'Marcador Aplicado: Projeto Desafio Mantis')]"));
 
@@ -92,15 +92,14 @@ public class ManterTarefaPage extends PaginaInicialPage {
 
 	public void criarTarefabutton() {
 		WebElement tarefaButton = wait.until(ExpectedConditions.visibilityOf(driver.findElement(buttonTarefaCriar)));
-		tarefaButton.click();	
-		
+		tarefaButton.click();
+
 	}
-	
 
 	public void tarefaCriadaComSucesso() {
 		WebElement tarefaCriada = wait.until(ExpectedConditions.visibilityOf(driver.findElement(tarefaCriadaSucesso)));
 		tarefaCriada.getText();
-		
+
 	}
 
 	// EDITAR ESTADO
@@ -119,31 +118,30 @@ public class ManterTarefaPage extends PaginaInicialPage {
 				.until(ExpectedConditions.visibilityOf(driver.findElement(atualizarInformacao)));
 		atualizarInformacaoButton.click();
 	}
-	
-	//adicionar marcador a tarefa
-		public void selecionarTarefaAddMarcador() {
-			WebElement atualizarTarefaMarcador = wait
-					.until(ExpectedConditions.visibilityOf(driver.findElement(tarefaComumCenarios)));
-			atualizarTarefaMarcador.click();
-		}
 
-		public void selecionarMarcador(String nomeMarcadorTarefa) {
-			Select dropdown = new Select(driver.findElement(By.id("tag_select")));
-			dropdown.selectByVisibleText(nomeMarcadorTarefa);
-		}
+	// adicionar marcador a tarefa
+	public void selecionarTarefaAddMarcador() {
+		WebElement atualizarTarefaMarcador = wait
+				.until(ExpectedConditions.visibilityOf(driver.findElement(tarefaComumCenarios)));
+		atualizarTarefaMarcador.click();
+	}
 
-		public void aplicarMarcadorTarefa() {
-			WebElement aplicarMarcadorButton = wait
-					.until(ExpectedConditions.visibilityOf(driver.findElement(aplicarMarcador)));
-			aplicarMarcadorButton.click();
-		}
+	public void selecionarMarcador(String nomeMarcadorTarefa) {
+		Select dropdown = new Select(driver.findElement(By.id("tag_select")));
+		dropdown.selectByVisibleText(nomeMarcadorTarefa);
+	}
 
-		public void validarHistoricoTarefa() {
-			WebElement validarHistorico = wait
-					.until(ExpectedConditions.visibilityOf(driver.findElement(historicoTarefa)));
-			validarHistorico.click();
-		}
-	
+	public void aplicarMarcadorTarefa() {
+		WebElement aplicarMarcadorButton = wait
+				.until(ExpectedConditions.visibilityOf(driver.findElement(aplicarMarcador)));
+		aplicarMarcadorButton.click();
+	}
+
+	public void validarHistoricoTarefa() {
+		WebElement validarHistorico = wait.until(ExpectedConditions.visibilityOf(driver.findElement(historicoTarefa)));
+		validarHistorico.click();
+	}
+
 	// ADICIONAR TAREFA USUARIO
 	public void selecionoTarefaUsuario() {
 		WebElement atribuirUsuarioSelecionarTarefa = wait
@@ -190,7 +188,5 @@ public class ManterTarefaPage extends PaginaInicialPage {
 				.until(ExpectedConditions.visibilityOf(driver.findElement(fecharTarefaButton)));
 		concluirResolucaoTarefa.click();
 	}
-		
+
 }
-
-

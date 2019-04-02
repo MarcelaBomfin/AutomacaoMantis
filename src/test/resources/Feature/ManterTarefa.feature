@@ -57,7 +57,7 @@ Examples:
 			And seleciono Ver Tarefa no menu
       And seleciono a tarefa para fechar
       When selecio o botao de fechar
-      And altero o campos "<adicionarAnotacao>"
+      And mudo o campo "<adicionarAnotacao>"
       Then concluo o fechamento da terefa
      
    Examples:

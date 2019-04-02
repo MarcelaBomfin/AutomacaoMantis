@@ -1,5 +1,6 @@
 package cucumber.api.junit.StepDefinitions;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -63,9 +64,8 @@ public class ManterCategoriasStepDefinitions {
 	@Then("^confirmo a criacao na lista$")
 	public void confirmo_a_criacao_na_lista() {
 
-		// String URL = driver.getCurrentUrl();
-		// Assert.assertEquals(URL,
-		// "https://mantis.marcela.base2.com.br/manage_proj_page.php");
+		String URL = driver.getCurrentUrl();
+		Assert.assertEquals(URL,"https://mantis.marcela.base2.com.br/manage_proj_page.php");
 	}
 
 	// adicionar ou alterar categoria

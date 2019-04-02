@@ -64,12 +64,6 @@ public class ManterTokenPage extends PaginaInicialPage {
 		revogarButtonField.click();
 	}
 
-	// public void validaMensagem() {
-	// WebElement validaMensagemField =
-	// wait.until(ExpectedConditions.visibilityOf(driver.findElement(mensagemRevogacao)));
-	// validaMensagemField.getText();
-	// }
-
 	public void revogarButton() {
 		WebElement retornarTelaTokenField = wait
 				.until(ExpectedConditions.visibilityOf(driver.findElement(comumTokenApi)));

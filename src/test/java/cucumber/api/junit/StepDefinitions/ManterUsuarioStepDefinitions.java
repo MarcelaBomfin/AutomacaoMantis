@@ -26,8 +26,6 @@ public class ManterUsuarioStepDefinitions {
         this.loginPage = new LoginPage(driver);
     }
 
-	
-
 	@Given("^o usuario abriu a pagina do mantis$")
 	public void o_usuario_abriu_a_pagina_do_mantis() {
 		usuario = new Usuario(PerfilUsuario.ADMINISTRATOR);
@@ -107,12 +105,6 @@ public class ManterUsuarioStepDefinitions {
 
 		String URL = driver.getCurrentUrl();
 		Assert.assertEquals(URL, "https://mantis.marcela.base2.com.br/manage_user_reset.php");
-
-		// String textoElement = driver.findElement(By.xpath("//*[contains(., 'Uma
-		// solicitação de confirmação foi enviada ao endereço de e-mail do usuário
-		// selecionado.Através deste, o usuário será capaz de alterar sua
-		// senha.')]")).getText();
-		// assertEquals("texto-esperado", textoElement);
 	}
 
 	// representar usuario

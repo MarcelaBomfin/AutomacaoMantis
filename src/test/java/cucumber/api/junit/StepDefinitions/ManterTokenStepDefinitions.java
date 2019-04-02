@@ -88,7 +88,7 @@ public class ManterTokenStepDefinitions {
 
 	@Then("^retorno para a tela de tokens$")
 	public void retorno_para_a_tela_de_tokens() {
-		// manterTokenPage.validaMensagem();
+		
 		String URL = driver.getCurrentUrl();
 		Assert.assertEquals(URL, "https://mantis.marcela.base2.com.br/api_tokens_page.php");
 	}

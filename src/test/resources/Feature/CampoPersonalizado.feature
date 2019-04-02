@@ -14,13 +14,9 @@ Feature: Cadastrar campos personalizados
  		 Then confirmo a criacao do campo
  
     Examples: 
-    |campoPersonalizado                        | 
-    #|Teste de campo Personalizado ChromeDriver |
-    #|Teste de campo Personalizado ChromeGrid   |
-     |Teste de campo Personalizado FireFoxDriver|
-    #|Teste de campo Personalizado FireFoxGrid|
-    #|Teste de campo Personalizado OperaDriver|
-    #|Teste de campo Personalizado OperaGrid|
+    |campoPersonalizado           | 
+    |Teste de campo Personalizado |
+
 
 @teste
 Scenario Outline: Editar o campo personalizado
@@ -29,13 +25,9 @@ Scenario Outline: Editar o campo personalizado
   Then confirmo a edicao do campo
  
   Examples: 
-  | acessoDeLeitura | acessoDeEscrita |
+  | acessoDeLeitura | acessoDeEscrita|
   | visualizador   | visualizador    |
-	#| visualizador   | visualizador    |
-	#| visualizador   | visualizador    |
-	#| visualizador   | visualizador    |
-	#| visualizador   | visualizador    |
-	#| visualizador   | visualizador    |
+
 
 @teste 
 Scenario Outline: Vincular o campo personalizado
@@ -46,11 +38,7 @@ Scenario Outline: Vincular o campo personalizado
   Examples:
   | projetos           |
   | Criacao de Projeto |
-  #| Criacao de Projeto |
-  #| Criacao de Projeto |
-  #| Criacao de Projeto |
-  #| Criacao de Projeto |
-  #| Criacao de Projeto |
+
   	
 @teste
 Scenario: Excluir o campo personalizado

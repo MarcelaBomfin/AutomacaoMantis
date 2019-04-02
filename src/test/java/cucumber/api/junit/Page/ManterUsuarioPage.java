@@ -17,7 +17,7 @@ public class ManterUsuarioPage extends PaginaInicialPage {
 	By elementoComumGerenciarUsuarios = (By.xpath("//a[contains(@href, '/manage_user_page.php')]"));
 
 	// elementos cenario de edicao
-	By editarUsuarios = (By.xpath("//a[contains(@href, 'manage_user_edit_page.php?user_id=66')]"));
+	By editarUsuarios = (By.xpath("//a[contains(@href, 'manage_user_edit_page.php?user_id=31')]"));
 	By atualizarButtonUsuario = (By.xpath("//input[@value='Atualizar Usuário']"));
 
 	// excluir perfil
@@ -26,14 +26,12 @@ public class ManterUsuarioPage extends PaginaInicialPage {
 	By confirmarExclusao = (By.xpath("//input[@value='Apagar Conta']"));
 
 	// redefinir a senha
-	By usuarioRedefinicaoSenha = (By.xpath("//a[contains(@href, 'manage_user_edit_page.php?user_id=66')]"));
+	By usuarioRedefinicaoSenha = (By.xpath("//a[contains(@href, 'manage_user_edit_page.php?user_id=31')]"));
 	By redefinirSenhaButton = (By.xpath("//input[@value='Redefinir Senha']"));
 
 	// representar o usuario
-	By selecionarUsuarioRepresentar = (By.xpath("//a[contains(@href, 'manage_user_edit_page.php?user_id=66')]"));
+	By selecionarUsuarioRepresentar = (By.xpath("//a[contains(@href, 'manage_user_edit_page.php?user_id=31')]"));
 	By representarUsuarioButton = (By.xpath("//input[@value='Representar Usuário']"));
-	// By cliqueAquiProsseguir = (By.xpath("//*[contains(., 'Clique aqui para
-	// prosseguir')]"));
 	By cliqueAquiProsseguir = (By.xpath("//a[contains(@href, 'my_view_page.php')]"));
 
 	// metodos comuns

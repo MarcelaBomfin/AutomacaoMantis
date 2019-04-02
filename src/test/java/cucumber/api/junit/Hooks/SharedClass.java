@@ -13,7 +13,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
@@ -39,8 +38,7 @@ public class SharedClass {
 				} else if ("InternetExplorer".equals(driverType)) {
 					InternetExplorerDriver();
 				}
-
-			// remote webdriver
+				
 			} else if ("grid".equals(tipoExecucao)) {
 				String url = props.getProperty(Propriedades.P_REMOTE_DRIVER_URL);
 				URL remoteUrl = new URL(url);
@@ -51,8 +49,8 @@ public class SharedClass {
 					FirefoxOptions cap = new FirefoxOptions();
 					remoteDriver(remoteUrl, cap);
 				} else if ("internetexplorer".equals(driverType));
-				InternetExplorerOptions cap = new InternetExplorerOptions();
-				remoteDriver(remoteUrl, cap);
+					InternetExplorerOptions cap = new InternetExplorerOptions();
+					remoteDriver(remoteUrl, cap);
 			}
 
 			driver.get("about:blank");

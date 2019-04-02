@@ -24,8 +24,6 @@ public class TarefaPegajosaStepDefinitions {
         this.loginPage = new LoginPage(driver);
     }
 
-
-
 	@Given("^o administrador abriu a pagina do mantis$")
 	public void o_administrador_abriu_a_pagina_do_mantis() {
 		usuario = new Usuario(PerfilUsuario.ADMINISTRATOR);

@@ -160,8 +160,8 @@ public class ManterTarefaStepDefinitions {
 		manterTarefaPage.fecharButtonTarefa();
 	}
 
-	@When("^altero o campos \"([^\"]*)\"$")
-	public void altero_o_campos_corrigido_teste_de_fechamento_de_tarefa(String adicionarAnotacao) {
+	@When("^mudo o campo \"([^\"]*)\"$")
+	public void mudo_o_campo(String adicionarAnotacao) {
 		manterTarefaPage.alterarCampoAnotacao(adicionarAnotacao);
 	}
 
