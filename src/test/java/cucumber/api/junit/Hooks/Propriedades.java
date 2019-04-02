@@ -10,13 +10,10 @@ public class Propriedades {
 		public static boolean FECHAR_BROWSER1 = true;
 		public static boolean FECHAR_BROWSER2 = true;
 		public static boolean FECHAR_BROWSER3 = true;
-		public static boolean FECHAR_BROWSER4 = true;
 		
 		public static Browsers BROWSER = Browsers.CHROME;
 		public static Browsers BROWSER1 = Browsers.FIREFOX;
-		public static Browsers BROWSER2 = Browsers.MicrosoftWebDriver;
-		public static Browsers BROWSER3 = Browsers.InternetExplorerDriver;
-		public static Browsers BROWSER4 = Browsers.OperaDriver;
+		public static Browsers BROWSER3 = Browsers.InternetExplorer;
 		
 		//Chaves das propriedades
 		public static String P_WEBDRIVER_DRIVER = "webdriver.driver";
@@ -28,9 +25,7 @@ public class Propriedades {
 		public enum Browsers {
 			CHROME,
 			FIREFOX,
-			MicrosoftWebDriver,
-			InternetExplorerDriver,
-			OperaDriver
+			InternetExplorer
 		}
 		
 		public enum TipoExecucao {

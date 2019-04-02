@@ -19,8 +19,8 @@ public class CriarUsuarioPerfilPage extends PaginaInicialPage {
 	By digitarNomeVerdadeiro = By.id("user-realname");
 	By nomeEmailUsuario = By.id("email-field");
 	By botaoCriarUsuario = (By.xpath("//input[@value='Criar Usuário']"));
-	By validaCriacaoUsuario = (By
-			.xpath("//*[contains(., 'Usuário ana.barbosa criado com um nível de acesso de gerente')]"));
+	By validarCriacao = (By
+			.xpath("//*[contains(., 'Clique aqui para prosseguir')]"));
 
 	// clicar em gerenciar
 	public void manterGerenciar() {
@@ -72,6 +72,12 @@ public class CriarUsuarioPerfilPage extends PaginaInicialPage {
 		WebElement botaoCriarUsuarioField = wait
 				.until(ExpectedConditions.visibilityOf(driver.findElement(botaoCriarUsuario)));
 		botaoCriarUsuarioField.click();
+	}
+
+	public void validarCriacaoUsuario() {
+		WebElement criacaoUsuario = wait
+				.until(ExpectedConditions.visibilityOf(driver.findElement(validarCriacao)));
+		criacaoUsuario.click();
 	}
 
 }

@@ -1,19 +1,17 @@
 package cucumber.api.junit.Hooks;
 
-import java.io.File;
+
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.After;
@@ -38,11 +36,7 @@ public class SharedClass {
 					chromeDriver();
 				} else if ("firefox".equals(driverType)) {
 					firefoxDriver();
-				} else if ("MicrosoftWebDriver".equals(driverType)) {
-					MicrosoftWebDriver();
-				} else if ("OperaDriver".equals(driverType)) {
-					OperaDriver();
-				} else if ("InternetExplorerDriver".equals(driverType)) {
+				} else if ("InternetExplorer".equals(driverType)) {
 					InternetExplorerDriver();
 				}
 
@@ -56,7 +50,9 @@ public class SharedClass {
 				} else if ("firefox".equals(driverType)) {
 					FirefoxOptions cap = new FirefoxOptions();
 					remoteDriver(remoteUrl, cap);
-				}
+				} else if ("internetexplorer".equals(driverType));
+				InternetExplorerOptions cap = new InternetExplorerOptions();
+				remoteDriver(remoteUrl, cap);
 			}
 
 			driver.get("about:blank");
@@ -80,16 +76,6 @@ public class SharedClass {
 	private void InternetExplorerDriver() {
 		System.setProperty("webdriver.ie.driver", "/Users/melbr/Drivers/IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
-	}
-
-	private void MicrosoftWebDriver() {
-		System.setProperty("webdriver.edge.driver", "/Users/melbr/Drivers/MicrosoftWebDriver.exe");
-		driver = new EdgeDriver();
-	}
-
-	private void OperaDriver() {
-		System.setProperty("webdriver.opera.driver", "/Users/melbr/Drivers/operadriver.exe");
-		driver = new OperaDriver();
 	}
 
 	private void remoteDriver(URL url, Capabilities cap) {

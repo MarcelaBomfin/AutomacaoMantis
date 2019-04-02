@@ -5,10 +5,8 @@ import java.net.URL;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -39,15 +37,10 @@ public static WebDriver initDriver() {
 		case FIREFOX:
 			driver = new FirefoxDriver();
 			break;
-		case MicrosoftWebDriver:
-			driver = new EdgeDriver();
-			break;
-		case InternetExplorerDriver:
+		case InternetExplorer:
 			driver = new InternetExplorerDriver();
 			break;
-		case OperaDriver:
-			driver = new OperaDriver();
-			break;
+		
 		}
 	}
 	if (Propriedades.TIPO_EXECUCAO == TipoExecucao.GRID) {
@@ -59,6 +52,9 @@ public static WebDriver initDriver() {
 		case FIREFOX:
 			cap = DesiredCapabilities.firefox();
 			break;
+		case InternetExplorer:
+			cap = DesiredCapabilities.internetExplorer();
+			break;
 		
 		default:
 			break;
@@ -66,7 +62,7 @@ public static WebDriver initDriver() {
 		
 		try {
 			driver = new RemoteWebDriver(new URL("http://192.168.0.184:4444/wd/hub"), cap);
-		} catch (MalformedURLException e) {
+		} catch (MalformedURLException e) { 
 			System.err.println("Falha na conexão com o GRID");
 			e.printStackTrace();
 		}
