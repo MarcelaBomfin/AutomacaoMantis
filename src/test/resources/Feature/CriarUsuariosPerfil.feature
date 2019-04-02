@@ -15,10 +15,10 @@ Scenario Outline: Criar varios usuarios
   
   Examples:
   | nomeUsuario    | nomeVerdadeiro |    email             | nivelDeAcesso |
-  #| maria.barbosa  | Maria Barbosa  | maria@teste.com.br   | gerente       |
-	#| marcela.ramos  | Marcela Ramos  | marcela@teste.com.br | atualizador   |
-	#| pedro.lacerda  | Pedro Lacerda  | pedro@teste.com.br   | relator       |
-	#| joao.silva1     | Joao Silva     | joao1@teste.com.br  	 | visualizador  |
-	| ana1.queiroz    | Ana Queiroz    | queiroz1@teste.com.br | desenvolvedor |
+  | maria.barbosa  | Maria Barbosa  | maria@teste.com.br   | gerente       |
+	| marcela.ramos  | Marcela Ramos  | marcela@teste.com.br | atualizador   |
+	| pedro.lacerda  | Pedro Lacerda  | pedro@teste.com.br   | relator       |
+	| joao.silva     | Joao Silva     | joao@teste.com.br  	 | visualizador  |
+	| ana.queiroz    | Ana Queiroz    | queiroz@teste.com.br | desenvolvedor |
 	
 	
