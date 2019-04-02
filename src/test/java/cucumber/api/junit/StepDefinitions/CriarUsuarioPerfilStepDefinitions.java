@@ -77,8 +77,6 @@ public class CriarUsuarioPerfilStepDefinitions {
 		criarUsuarioPerfilPage.finalizarCriarUsuario();
 		String mensagem = "Usuário " + nomeUsuario + " criado com um nível de acesso de " + nivelDeAcesso;
 		String mensagemTela = criarUsuarioPerfilPage.validarCriacaoUsuario();
-		System.out.println(mensagem);
-		System.out.println(mensagemTela);
 		Assert.assertTrue(mensagem.equals(mensagemTela));
 	}
 
