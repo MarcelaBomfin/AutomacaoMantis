@@ -1,5 +1,6 @@
 package cucumber.api.junit.StepDefinitions;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,6 +18,9 @@ public class CriarUsuarioPerfilStepDefinitions {
 	LoginPage loginPage;
 	Usuario usuario;
 	SharedClass sharedClass;
+	
+	String nomeUsuario = "";
+	String nivelDeAcesso = "";
 
 	public CriarUsuarioPerfilStepDefinitions(SharedClass sharedClass){
         this.sharedClass = sharedClass;
@@ -60,6 +64,8 @@ public class CriarUsuarioPerfilStepDefinitions {
 	@When("^preencher os campos \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"$")
 	public void preencherOsCampos(String nomeUsuario, String nomeVerdadeiro, String nomeEmailUsuario,
 			String nivelDeAcesso) {
+		this.nomeUsuario = nomeUsuario;
+		this.nivelDeAcesso = nivelDeAcesso;
 		criarUsuarioPerfilPage.preencherNomeUsuario(nomeUsuario);
 		criarUsuarioPerfilPage.preencherNomeVerdadeiro(nomeVerdadeiro);
 		criarUsuarioPerfilPage.preencherEmail(nomeEmailUsuario);
@@ -69,6 +75,11 @@ public class CriarUsuarioPerfilStepDefinitions {
 	@Then("^o sistema ira criar os usuarios$")
 	public void oSistemaIraCriarOsUsuarios() {
 		criarUsuarioPerfilPage.finalizarCriarUsuario();
+		String mensagem = "Usuário " + nomeUsuario + " criado com um nível de acesso de " + nivelDeAcesso;
+		String mensagemTela = criarUsuarioPerfilPage.validarCriacaoUsuario();
+		System.out.println(mensagem);
+		System.out.println(mensagemTela);
+		Assert.assertTrue(mensagem.equals(mensagemTela));
 	}
 
 }

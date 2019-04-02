@@ -48,9 +48,10 @@ public class SharedClass {
 				} else if ("firefox".equals(driverType)) {
 					FirefoxOptions cap = new FirefoxOptions();
 					remoteDriver(remoteUrl, cap);
-				} else if ("internetexplorer".equals(driverType));
+				} else if ("InternetExplorer".equals(driverType)) {
 					InternetExplorerOptions cap = new InternetExplorerOptions();
 					remoteDriver(remoteUrl, cap);
+				}
 			}
 
 			driver.get("about:blank");
